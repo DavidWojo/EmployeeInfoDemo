@@ -1,18 +1,13 @@
 package com.home.ejbs;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
-import javax.ejb.Singleton;
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
 
 import com.home.models.Employee;
@@ -25,17 +20,17 @@ public class EmployeeBean implements EmployeeBeanLocal
 
     public EmployeeBean()
     {
-    	System.out.println("********* Constructor start ******");
-    	System.out.println("********* Constructor end ******");
+    	System.out.println("********* Entering EmployeeBean  Constructor ******");
+    	System.out.println("********* Exiting  EmployeeBean  Constructor ******");
     }
     
     @PostConstruct 
     public void init()
     {
-    	System.out.println("********* init() start ******");
+    	System.out.println("********* Entering EmployeeBean init() ******");
     	EntityManagerFactory emf = Persistence.createEntityManagerFactory("EmployeeService");
     	em = emf.createEntityManager();
-    	System.out.println("********* init() end ******");
+    	System.out.println("********* Exiting  EmployeeBean init() ******");
     }
 
 	@Override
