@@ -48,8 +48,10 @@ public class ListBean implements Serializable
 	
 	public ListBean()
 	{
+		System.out.println("****** Entering ListBean constructor ******");
 		this.stringList.add("1");
 		this.stringList.add("2");
+		System.out.println("****** Exiting ListBean constructor ******");
 	}
 	
 	

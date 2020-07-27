@@ -20,8 +20,8 @@ public class EmployeeBean implements EmployeeBeanLocal
 
     public EmployeeBean()
     {
-    	System.out.println("********* Entering EmployeeBean  Constructor ******");
-    	System.out.println("********* Exiting  EmployeeBean  Constructor ******");
+    	System.out.println("********* Entering EmployeeBean Constructor ******");
+    	System.out.println("********* Exiting  EmployeeBean Constructor ******");
     }
     
     @PostConstruct 
@@ -29,14 +29,14 @@ public class EmployeeBean implements EmployeeBeanLocal
     {
     	System.out.println("********* Entering EmployeeBean init() ******");
     	EntityManagerFactory emf = Persistence.createEntityManagerFactory("EmployeeService");
-    	em = emf.createEntityManager();
+    	this.em = emf.createEntityManager();
     	System.out.println("********* Exiting  EmployeeBean init() ******");
     }
 
 	@Override
 	public List<Employee> findAllEmployees()
 	{
-        TypedQuery query = em.createQuery("SELECT e FROM Employee e", Employee.class);
+        TypedQuery query = this.em.createQuery("SELECT e FROM Employee e", Employee.class);
         return (List<Employee>)(query.getResultList());
 
 		
