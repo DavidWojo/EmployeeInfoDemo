@@ -8,22 +8,18 @@
 <f:view contentType="text/html">
     <h:head>
         <meta charset="UTF-8"/>
-        <title>Employee Info App</title>
+        <title>Employee Info App - #{pageTitle}</title>
         <link rel="stylesheet" href="resources/css/default.css"/>
     </h:head>
     <h:body>
-        <header>
-            <h1>Welcome to the Employee Info App!</h1>
-        </header>
+		<ui:include src="/templates/page-header.xhtml"/>
         <ui:insert name="panel-main">
             <section>
                 <h1>Main Panel</h1>
                 <p>Placeholder text.</p>
             </section>
         </ui:insert>
-        <footer>
-            <p>Thanks for visiting!</p>
-        </footer>
+        <ui:include src="/templates/page-footer.xhtml"/>
     </h:body>
 </f:view>
 </html>

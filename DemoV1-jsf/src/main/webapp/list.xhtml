@@ -4,45 +4,50 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-<ui:composition template="/templates/page-template.xhtml">
-<ui:define name="panel-main">
-<section>
-	<h:form>
-		<div>
-			<h:outputLabel value="#{listBean.myText}" />
-		</div>
-		<div>
-			<h:dataTable value="#{listBean.stringList}" var="item">
-				<h:column>
-					<f:facet name="header">String:</f:facet>
-					<h:outputText value="#{item}" />
-				</h:column>
-			</h:dataTable>
-		</div> 
+	<ui:composition template="/templates/page-template.xhtml">
+	<ui:param name="pageTitle" value="Employee List"/>
+		<ui:define name="panel-main">
+			<section>
+			<h:form>
+				<div>
+					<h:outputLabel value="#{listBean.myText}" />
+				</div>
+				
+				<div>
+					<h:dataTable value="#{listBean.stringList}" var="item">
+            			<h:column>
+							<f:facet name="header">String:</f:facet>
+								<h:outputText value="#{item}" />
+						</h:column>
+					</h:dataTable>
+				</div> 
 		
-		<div>
-			<h:dataTable value="#{listBean.employeeList}" var="item">
-				<h:column>
-					<f:facet name="header">First Name</f:facet>
-					<h:outputText value="#{item.firstName}" />
-				</h:column>
+				<div>
+					<h:dataTable value="#{listBean.employeeList}" var="item"
+								 styleClass  = "employeeTable"
+            					 headerClass = "employeeTableHeader"
+            					 rowClasses  = "employeeTableOddRow, employeeTableEvenRow"
+            					 >
+            					 
+						<h:column>
+							<f:facet name="header">First Name</f:facet>
+							<h:outputText value="#{item.firstName}" />
+						</h:column>
 				
-				<h:column>
-					<f:facet name="header">Last Name</f:facet>
-					<h:outputText value="#{item.lastName}" />
-				</h:column>
+						<h:column>
+							<f:facet name="header">Last Name</f:facet>
+							<h:outputText value="#{item.lastName}" />
+						</h:column>
 				
-				<h:column>
-					<f:facet name="header">Email</f:facet>
-					<h:outputText value="#{item.email}" />
-				</h:column>
-				
-				
-			</h:dataTable>
-		</div> 
-		
-	</h:form>
-	</section>
-	</ui:define>
-</ui:composition>
+						<h:column>
+							<f:facet name="header">Email</f:facet>
+							<h:outputText value="#{item.email}" />
+						</h:column>
+						
+					</h:dataTable>
+				</div> 
+			</h:form>
+			</section>
+		</ui:define>
+	</ui:composition>
 </html>

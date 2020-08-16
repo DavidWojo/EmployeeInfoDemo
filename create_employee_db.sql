@@ -18,14 +18,17 @@ CREATE TABLE employee
 (
   EmployeeID   INT            PRIMARY KEY   AUTO_INCREMENT,    
   FirstName    VARCHAR(50)    NOT NULL,   
-  LastName     VARCHAR(50)    NOT NULL,
-  Email        VARCHAR(50)    NOT NULL   
-  
-);
+  LastName     VARCHAR(50),
+  Email        VARCHAR(50)   
+  );
 
 -- insert rows into the table
 INSERT INTO employee VALUES 
 (100,'David',  'Wojciechowski', 'davidwojo15@gmail.com'), 
-(101,'Sylvia', 'Kedzierski', 'tanz@gmail.com'), 
-(102,'Alice',  'Kedzierski', 'alice@gmail.com');
+(101,'Sylvia', 'Kedzierski', 'tanzmusic@yahoo.com'), 
+(102,'Alice',  'Kedzierski', 'alice_kedzierski@gmail.com'),
+(103,'Sierra',  '', 'sierra@cats.com'),
+(104,'Cougar',  '', 'cougar@cats.com');
+
+
 

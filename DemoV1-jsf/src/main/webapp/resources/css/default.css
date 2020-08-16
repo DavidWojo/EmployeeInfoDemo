@@ -1,3 +1,26 @@
+.employeeTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.employeeTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.employeeTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFFF;	
+}
+
+.employeeTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
+
+
 html {
     margin: 0;
     padding: 0;
@@ -61,18 +84,3 @@ body > footer > p {
     margin: 0;
 }
 
-.product-summary {
-    margin: 0.5em 0;
-    padding: 0.5em 0;
-    clear: both;
-}
-
-.product-summary > img {
-    float: left;
-    padding-right: 1em;
-}
-
-.product-details > img {
-    float: left;
-    padding-right: 1em;
-}
