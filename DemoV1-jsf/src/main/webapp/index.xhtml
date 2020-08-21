@@ -7,8 +7,7 @@
 	<ui:composition template="/templates/page-template.xhtml">
 	<ui:param name="pageTitle" value="Employee List"/>
 		<ui:define name="panel-main">
-			<section>
-			<h:form>
+			<h:form styleClass="theForm">
 				<div>
 					<h:outputLabel value="#{listBean.myText}" />
 				</div>
@@ -47,7 +46,6 @@
 					</h:dataTable>
 				</div> 
 			</h:form>
-			</section>
 		</ui:define>
 	</ui:composition>
 </html>
